@@ -13,7 +13,7 @@ const client = new Client({
 });
 
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: 'Your Api Key',
 });
 
 const openai = new OpenAIApi(configuration);
