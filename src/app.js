@@ -3,6 +3,7 @@
 // GitHub:- https://github.com/RishabhSahil/whatsapp-bot-type-script
 // Linkden:- https://www.linkedin.com/in/rishabhsahil/
 // OpenAI-API-KEY:- https://platform.openai.com/
+
 const qrcode = require('qrcode-terminal');
 const fs = require("fs")
 const { Client, LegacySessionAuth, LocalAuth, MessageMedia} = require('whatsapp-web.js');
