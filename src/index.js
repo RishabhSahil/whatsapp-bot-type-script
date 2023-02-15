@@ -4,6 +4,8 @@
 // Linkden:- https://www.linkedin.com/in/rishabhsahil/
 // OpenAI-API-KEY:- https://platform.openai.com/
 
+console.log("\n\nApp-Name:- Jarvis A.I Bot\nDeveloper-Name:- R.S (RISHABH-SAHIL)\nGitHub:- https://github.com/RishabhSahil/whatsapp-bot-type-script\nLinkden:- https://www.linkedin.com/in/rishabhsahil/\nOpenAI-API-KEY:- https://platform.openai.com/")
+
 const qrcode = require('qrcode-terminal');
 const fs = require("fs")
 const { Client, LegacySessionAuth, LocalAuth, MessageMedia} = require('whatsapp-web.js');
@@ -11,7 +13,7 @@ const { getSystemErrorMap } = require('util');
 const { Configuration, OpenAIApi } = require("openai");
 const { url } = require('inspector');
 const configuration = new Configuration({
-  apiKey: Your-Api-Key,
+  apiKey: 'Your-API-Key',
 });
 const openai = new OpenAIApi(configuration);
 const client = new Client({
@@ -22,7 +24,8 @@ const client = new Client({
 
 // Save session values to the file upon successful auth
 client.on('authenticated', (session) => {
-    console.log(session);
+    console.log("\n\nAuthenticated Successfully");
+    // console.log(session);
 });
  
 
@@ -32,7 +35,7 @@ client.on("qr", qr => {
 })
 
 client.on('ready', () => {
-    console.log("ready to message")
+    console.log("Ready To Message\n\n")
 });
 
 function man(){
@@ -108,9 +111,9 @@ function man(){
                 message.reply("*Welcome*");
                 console.log("Jarvis: *Welcome*");
             } 
-            // else {
-            //     console.log("Jarvis: *Welcome Sir Jarvis Added New Features*");
-            // } 
+            else {
+                console.log("Jarvis: *Adding New Features...!!*");
+            } 
         });
     } catch(err) {
         message.reply("*Sir there is an error so now we have to wait till RISHABH sir solve this error...!!*");
